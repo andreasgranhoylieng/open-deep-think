@@ -13,8 +13,8 @@ You are 1 of 5 parallel workers solving a hard problem.
 TASK:
 1. Do NOT give a simple answer. 
 2. Perform a "Deep Dive" analysis.
-3. If you are GPT-5.1, focus on structural logic.
-4. If you are Gemini 3, focus on multi-modal connections and context.
+3. If you are GPT-5.1, focus on structural logic and documentation.
+4. If you are Gemini 3, focus on mathematics and code.
 5. If you are DeepSeek, look for edge cases and code-based proofs.
 
 Output your internal monologue clearly marked with markdown headers.
@@ -40,7 +40,7 @@ class AnalysisEvent(Event):
     thoughts: str
 
 class DeepThinkWorkflow(Workflow):
-    def __init__(self, workers: List[LLM], judge: LLM, timeout: int = 120, **kwargs):
+    def __init__(self, workers: List[LLM], judge: LLM, timeout: int = 600, **kwargs):
         super().__init__(timeout=timeout, **kwargs)
         self.workers = workers
         self.judge = judge

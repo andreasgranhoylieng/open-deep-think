@@ -3,18 +3,17 @@ Model Registry based on Nov 2025 OpenRouter availability.
 """
 
 # The Synthesizer
-JUDGE_MODEL = "google/gemini-3.0-pro" 
+JUDGE_MODEL = "google/gemini-3-pro-preview" 
 
 # The Parallel Workers
 # Worker 1 & 2: Gemini 3 (High Reasoning)
-WORKER_GEMINI = "google/gemini-3.0-pro"
-
+WORKER_GEMINI = "google/gemini-3-pro-preview"
 # Worker 3 & 4: GPT 5.1 (Thinking Variant)
 # Using 'thinking' variant per leaks suggesting specialized reasoning buckets
-WORKER_GPT = "openai/gpt-5.1-thinking" 
+WORKER_GPT = "openai/gpt-5.1" 
 
 # Worker 5: DeepSeek V3 (The wildcard)
-WORKER_DEEPSEEK = "deepseek/deepseek-v3"
+WORKER_DEEPSEEK = "deepseek/deepseek-v3.2-exp"
 
 # Default configuration for the team
 DEFAULT_TEAM_CONFIG = {
